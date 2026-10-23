@@ -1,17 +1,17 @@
 # Dados do Aluno
 
-- **Nome:** Simão Costa
-- **Número:** 22609752
+- **Nome:** Simão Costa  
+- **Número:** 22609752 
 - **Turma:** TD01AMVI01 
 
 ---
 
 ## Alterações realizadas
 
-(Descreve brevemente as alterações feitas neste repositório.)
+Aprendizagem de uso de branch, merge e rebase
 
 ---
 
 ## Observações (opcional)
 
-(Podes deixar aqui algum comentário sobre o processo, dificuldades ou observações relevantes.)
+Decorar como usar cada comando, ambos novos e já aprendidos para este trabalho, foi ambos interessante e um pouco confuso ao começo, mas sinto que me habituo rápidamente 
