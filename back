@@ -1,0 +1,59 @@
+[33mcommit 7a8369e27dbb276df12619fa545df7620fa054bf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: RafaelDavidJose <rafaeldavidjose.dev@gmail.com>
+Date:   Fri Oct 23 13:47:23 2026 +0100
+
+    Atualiza instruções sobre configuração do repositório remoto e migração para Git LFS
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 6f8fc70..ac32836 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -24,7 +24,19 @@[m [mREADME.md[m
+ README_modelo.md[m
+ ```[m
+ [m
+[31m-Antes de começares os exercícios, cria um repositório vazio no teu GitHub para guardares o teu trabalho e liga-o ao projeto local como um remoto adicional. Como o clone já tem um remoto para o repositório base, dá um nome diferente ao teu remoto pessoal. Usa o remoto pessoal para enviar e sincronizar as tuas alterações.[m
+[32m+[m[32mAntes de começares os exercícios, cria um repositório vazio no teu GitHub para guardares o teu trabalho. Depois, altera o remoto `origin` para que aponte para o teu repositório em vez do repositório base:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32mgit remote set-url origin <url-do-teu-repositório>[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mConfirma que ficou correto:[m
+[32m+[m
+[32m+[m[32m```bash[m
+[32m+[m[32mgit remote -v[m
+[32m+[m[32m```[m
+[32m+[m
+[32m+[m[32mDeves ver o URL do teu repositório nas linhas `fetch` e `push`. A partir daqui, o `origin` é o teu **remoto pessoal**, e é nele que deves enviar e sincronizar as tuas alterações.[m
+ [m
+ ---[m
+ [m
+[36m@@ -34,7 +46,7 @@[m [mAtiva o **Git LFS** e garante que o ficheiro grande é tratado corretamente.[m
+ [m
+ - Instala e configura o LFS.[m
+ - Como a imagem já existe no histórico, garante que as versões anteriores também passam a ser geridas pelo LFS antes do primeiro envio para o teu remoto pessoal. Limita a migração aos ficheiros de imagem (`*.png`), sem migrar indiscriminadamente os restantes ficheiros do projeto.[m
+[31m-- A migração tem de abranger todo o histórico, incluindo os commits que já existem no repositório base. Por omissão, o `git lfs migrate` ignora commits que já estão num remoto, por isso tens de indicar explicitamente que queres migrar todas as referências.[m
+[32m+[m[32m- A migração tem de abranger todo o histórico, incluindo os commits que vieram do repositório base. Por omissão, o `git lfs migrate` ignora commits que já existem em referências remotas, por isso tens de indicar explicitamente que queres migrar todas as referências.[m
+ - Confirma que a migração criou o ficheiro `.gitattributes` com a regra para os ficheiros PNG e que o `large_image.png` passou a ser um ponteiro LFS.[m
+ - Envia o repositório para o teu remoto pessoal, definindo-o como *upstream* da *main*. Assim, os `git pull` e `git push` seguintes passam a usar o remoto pessoal por omissão.[m
+ - Confirma no GitHub se o ficheiro grande aparece como **“Stored with Git LFS”**.[m
+[36m@@ -103,7 +115,7 @@[m [mNa branch *main*, observa os estados possíveis dos ficheiros.[m
+ [m
+ ## Exercício 6 - Repositório Remoto[m
+ [m
+[31m-Pratica a sincronização entre o repositório local e o remoto pessoal criado na preparação.[m
+[32m+[m[32mPratica a sincronização entre o repositório local e o remoto pessoal configurado no início da aula.[m
+ [m
+ - Confirma que o repositório local está ligado ao teu remoto pessoal.[m
+ - Envia para o GitHub os commits locais que ainda não foram enviados.[m
+[36m@@ -134,6 +146,4 @@[m [mCombina todos os conceitos:[m
+ - Garante que fazes **commits pequenos e descritivos**.[m
+ - Verifica frequentemente o estado do repositório (`git status`).[m
+ - Usa `git log --oneline --graph` para visualizar o histórico.[m
+[31m-- Mantém o repositório atualizado com `git pull`.[m
+[31m-[m
+[31m----[m
+\ No newline at end of file[m
+[32m+[m[32m- Mantém o repositório atualizado com `git pull`.[m
+\ No newline at end of file[m
