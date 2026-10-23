@@ -1,7 +1,7 @@
 # Dados do Aluno
 
-- **Nome:** Simão Costa  
-- **Número:** 22609752 
+- **Nome:** Simão Costa
+- **Número:** 22609752
 - **Turma:** TD01AMVI01 
 
 ---
